@@ -17,7 +17,6 @@ Comment Analysis of the K-heritage.tv YouTube Channel
 **RedditGo** is a project that gathers posts and comments from Korean, Chinese, and Japanese communities on Reddit,  
 providing a multifaceted analysis of sentiment changes during the COVID-19 pandemic.
 
-### Key Features
 - **Multi-language Support**: Focused on Korean, Chinese, and Japanese sentiment analysis
 - **Sentiment Shift Detection**: Compares pre-/post-data to track emotional trends
 - **Extensibility**: Easily integrate additional languages or modules for enhanced functionality
