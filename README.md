@@ -12,6 +12,7 @@ Comment Analysis of the K-heritage.tv YouTube Channel
 
 
 # RedditGo
+[RedditGo](https://github.com/tsarkr/redditgo)
 
 **RedditGo** is a project that gathers posts and comments from Korean, Chinese, and Japanese communities on Reddit,  
 providing a multifaceted analysis of sentiment changes during the COVID-19 pandemic.
