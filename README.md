@@ -26,5 +26,5 @@ providing a multifaceted analysis of sentiment changes during the COVID-19 pande
 # KCI SCRAPE
 [KCI SCRAPE](https://github.com/tsarkr/kci_scrape)
 
-This project aims to analyze KCI research papers, with a particular focus on the "Cultural Heritage Curation" field. It seeks to visualize research trends and author networks, enabling a deeper understanding of collaboration dynamics among researchers. By leveraging data-driven insights, the project generates co-authorship networks to provide a clear and comprehensive view of scholarly interactions.
+This project analyzes KCI research papers, focusing on the "Cultural Heritage Curation" field. It visualizes research trends and author networks to reveal collaboration dynamics among researchers. By leveraging data-driven insights, the project generates co-authorship networks for a clear view of scholarly interactions.
 ---
