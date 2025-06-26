@@ -32,10 +32,16 @@ def get_engine():
 engine = get_engine()
 
 # ✅ 데이터 불러오기
-@st.cache_data(ttl=300)
+@st.cache_data(ttl=3600)
 def load_data():
-    videos = pd.read_sql("SELECT * FROM videos", engine)
-    comments = pd.read_sql("SELECT * FROM comments", engine)
+    videos = pd.read_sql(
+        "SELECT video_id, channel_id, title, view_count, like_count, comment_count, published_at, crawled_at FROM videos",
+        engine
+    )
+    comments = pd.read_sql(
+        "SELECT comment_id, video_id, author_display_name, text_display, published_at, crawled_at FROM comments ORDER BY crawled_at DESC LIMIT 1000",
+        engine
+    )
     st.write("📥 videos 로딩 완료:", videos.shape)
     st.write("📥 comments 로딩 완료:", comments.shape)
     return videos, comments
