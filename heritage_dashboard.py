@@ -22,7 +22,6 @@ def load_config(path="config.ini"):
     config = configparser.ConfigParser()
     config.read(path)
     return {
-        "api_key": config.get("google_api", "api_key"),
         "db_config": {
             "user": config.get("mysql", "user"),
             "password": config.get("mysql", "password"),
