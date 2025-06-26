@@ -3,6 +3,7 @@ import pandas as pd
 import streamlit as st
 import pymysql
 from sqlalchemy import create_engine
+from sqlalchemy import text
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
@@ -65,8 +66,8 @@ if comments_df.empty:
 # ✅ 총 영상/댓글 수 가져오기
 def get_total_counts():
     with engine.connect() as conn:
-        total_videos = conn.execute("SELECT COUNT(*) FROM videos").scalar()
-        total_comments = conn.execute("SELECT COUNT(*) FROM comments").scalar()
+        total_videos = conn.execute(text("SELECT COUNT(*) FROM videos")).scalar()
+        total_comments = conn.execute(text("SELECT COUNT(*) FROM comments")).scalar()
     return total_videos, total_comments
 
 total_videos, total_comments = get_total_counts()
