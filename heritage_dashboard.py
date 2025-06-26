@@ -81,9 +81,9 @@ col3.metric("📺 채널 수", f"{videos_df['channel_id'].nunique():,} 개")
 st.markdown("---")
 
 # ✅ 날짜별 수집 영상 수
-st.subheader("🗓️ 수집 날짜별 영상 수")
-videos_df["crawled_date"] = pd.to_datetime(videos_df["crawled_at"]).dt.date
-daily_counts = videos_df.groupby("crawled_date").size()
+st.subheader("🗓️ 공개일 기준 영상 수")
+videos_df["published_date"] = pd.to_datetime(videos_df["published_at"]).dt.date
+daily_counts = videos_df.groupby("published_date").size()
 
 st.bar_chart(daily_counts)
 
