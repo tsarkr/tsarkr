@@ -3,9 +3,9 @@ import pandas as pd
 import streamlit as st
 import pymysql
 from sqlalchemy import create_engine
-import configparser
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
+
 
 DB = st.secrets["mysql"]
 
