@@ -35,11 +35,11 @@ engine = get_engine()
 @st.cache_data(ttl=3600)
 def load_data():
     videos = pd.read_sql(
-        "SELECT video_id, channel_id, title, view_count, like_count, comment_count, published_at, crawled_at FROM videos",
+        "SELECT video_id, channel_id, title, view_count, like_count, comment_count, published_at, crawled_at FROM videos ORDER BY crawled_at DESC LIMIT 500",
         engine
     )
     comments = pd.read_sql(
-        "SELECT comment_id, video_id, author_display_name, text_display, published_at, crawled_at FROM comments ORDER BY crawled_at DESC LIMIT 1000",
+        "SELECT comment_id, video_id, author_display_name, text_display, published_at, crawled_at FROM comments ORDER BY crawled_at DESC LIMIT 200",
         engine
     )
     st.write("📥 videos 로딩 완료:", videos.shape)
@@ -79,10 +79,10 @@ st.bar_chart(daily_counts)
 
 # ✅ 인기 영상 Top 10
 st.subheader("🔥 조회수 기준 인기 영상 Top 10")
-top_videos = videos_df.sort_values("view_count", ascending=False).head(10)
+top_videos = videos_df.sort_values("view_count", ascending=False).head(5)
 st.dataframe(top_videos[["title", "view_count", "like_count", "comment_count", "published_at"]])
 
 # ✅ 최근 댓글 100건 미리보기
 st.subheader("📝 최근 수집된 댓글")
-recent_comments = comments_df.sort_values("crawled_at", ascending=False).head(100)
+recent_comments = comments_df.sort_values("crawled_at", ascending=False).head(50)
 st.dataframe(recent_comments[["video_id", "author_display_name", "text_display", "published_at"]])
