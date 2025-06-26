@@ -17,8 +17,7 @@ for path in font_paths:
         break
 plt.rcParams['axes.unicode_minus'] = False
 
-# ✅ Streamlit Cloud에서 .streamlit/secrets.toml 사용
-# DB = CONFIG["db_config"]
+
 
 # ✅ DB 연결
 @st.cache_resource
