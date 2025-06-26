@@ -34,7 +34,7 @@ engine = get_engine()
 @st.cache_data(ttl=3600)
 def load_data():
     videos = pd.read_sql(
-        "SELECT video_id, channel_id, title, view_count, like_count, comment_count, published_at, crawled_at FROM videos ORDER BY crawled_at DESC LIMIT 500",
+        "SELECT video_id, channel_id, title, view_count, like_count, comment_count, published_at, crawled_at FROM videos ORDER BY view_count DESC LIMIT 500",
         engine
     )
     comments = pd.read_sql(
@@ -61,10 +61,20 @@ if videos_df.empty:
 if comments_df.empty:
     st.warning("⚠️ comments 테이블에 데이터가 없습니다.")
 
+
+# ✅ 총 영상/댓글 수 가져오기
+def get_total_counts():
+    with engine.connect() as conn:
+        total_videos = conn.execute("SELECT COUNT(*) FROM videos").scalar()
+        total_comments = conn.execute("SELECT COUNT(*) FROM comments").scalar()
+    return total_videos, total_comments
+
+total_videos, total_comments = get_total_counts()
+
 # ✅ 상단 요약 지표
 col1, col2, col3 = st.columns(3)
-col1.metric("🎞️ 총 영상 수", f"{len(videos_df):,} 개")
-col2.metric("💬 총 댓글 수", f"{len(comments_df):,} 개")
+col1.metric("🎞️ 총 영상 수", f"{total_videos:,} 개")
+col2.metric("💬 총 댓글 수", f"{total_comments:,} 개")
 col3.metric("📺 채널 수", f"{videos_df['channel_id'].nunique():,} 개")
 
 st.markdown("---")
