@@ -17,22 +17,8 @@ for path in font_paths:
         break
 plt.rcParams['axes.unicode_minus'] = False
 
-# ✅ config.ini 로드
-def load_config(path="config.ini"):
-    config = configparser.ConfigParser()
-    config.read(path)
-    return {
-        "db_config": {
-            "user": config.get("mysql", "user"),
-            "password": config.get("mysql", "password"),
-            "host": config.get("mysql", "host"),
-            "database": config.get("mysql", "database"),
-            "charset": config.get("mysql", "charset"),
-        }
-    }
-
-CONFIG = load_config()
-DB = CONFIG["db_config"]
+# ✅ Streamlit Cloud에서 .streamlit/secrets.toml 사용
+# DB = CONFIG["db_config"]
 
 # ✅ DB 연결
 @st.cache_resource
