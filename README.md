@@ -1,36 +1,43 @@
-# Shortener 11e
-[Short URL service](https://11e.kr)<br/>
-[shortener_11e](https://github.com/tsarkr/shortener_11e)
+# tsarkr — Project Index
 
-Shortener 11e is a URL shortening service initially developed with ChatGPT and enhanced with GitHub Copilot.
-It provides a service that converts long URLs into shorter, memorable links.
+A collection of personal and research projects focused on Korean cultural heritage, text mining, and data collection/analysis.
 
+Main repositories
 
-# K-Heritage
-[K-Heritage](https://github.com/tsarkr/k-heritage)
+- [shortener_11e](https://github.com/tsarkr/shortener_11e) — PHP-based URL shortener (11e.kr)
+- [k-heritage](https://github.com/tsarkr/k-heritage) — YouTube comment text mining and analysis for K-Heritage
+- [redditgo](https://github.com/tsarkr/redditgo) — Multilingual (Korean/Chinese/Japanese) Reddit collection and sentiment analysis
+- [kci_scrape](https://github.com/tsarkr/kci_scrape) — KCI paper scraping and co-authorship network visualization
+- [K-D-H](https://github.com/tsarkr/K-D-H) — K-pop related analysis and data projects
+- [docent](https://github.com/tsarkr/docent) — Research tools and utilities
+- [darkstar](https://github.com/tsarkr/darkstar) — Example Rust project
 
-Comment Analysis of the K-heritage.tv YouTube Channel
+Project summary
 
-Analyzing Audience Responses to K-Heritage Channel Video Content Using Text Mining : Focusing on YouTube Comments  
-[Research Paper](https://gyungmin.tsar.kr/%ED%85%8D%EC%8A%A4%ED%8A%B8%EB%A7%88%EC%9D%B4%EB%8B%9D%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%B1%84%EB%84%90%20%EC%98%81%EC%83%81%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%88%98%EC%9A%A9%EC%9E%90%20%EB%B0%98%EC%9D%91%20%EB%B6%84%EC%84%9D.pdf)
+- Purpose: Develop reproducible analysis pipelines and tooling for cultural heritage and content analysis, including data collection and processing.
+- Key technologies: Python, PHP, Rust, text mining, network analysis.
 
+Quick start
 
-# RedditGo
-[RedditGo](https://github.com/tsarkr/redditgo)
+- Each project has its own repository with installation and usage instructions. Open the repository you are interested in and read its `README.md` for details.
 
-**RedditGo** is a project that gathers posts and comments from Korean, Chinese, and Japanese communities on Reddit,  
-providing a multifaceted analysis of sentiment changes during the COVID-19 pandemic.
+Contributing and usage
 
-- **Multi-language Support**: Focused on Korean, Chinese, and Japanese sentiment analysis
-- **Sentiment Shift Detection**: Compares pre-/post-data to track emotional trends
-- **Extensibility**: Easily integrate additional languages or modules for enhanced functionality
+- Most projects are intended for research and learning purposes. Contributions are welcome; please open an issue first to discuss major changes.
 
+License
 
-# KCI SCRAPE
-[KCI SCRAPE](https://github.com/tsarkr/kci_scrape)
+- If an individual repository does not specify a license, `MIT` is recommended by default. See the `LICENSE` file in each repository for specifics.
 
-This project analyzes KCI research papers, focusing on the **"Cultural Heritage Curation"** field.  
-It visualizes research trends and author networks to reveal collaboration dynamics among researchers.  
-By leveraging data-driven insights, the project generates co-authorship networks for a clear view of scholarly interactions.
+Contact
+
+- Personal site: https://gyungmin.tsar.kr/
+- GitHub profile: https://github.com/tsarkr
+
+Repository organization suggestions
+
+- Monorepo (optional): Projects can be consolidated under a `packages/` directory and share common CI workflows if desired.
+- Topics and descriptions: Improve discoverability by updating each repository's GitHub `description` and `topics` (e.g. `text-mining`, `heritage`, `data-scraping`).
 
 ---
+_Last updated: 2026-05-15_

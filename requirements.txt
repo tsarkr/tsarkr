@@ -1,5 +1,0 @@
-streamlit
-pymysql
-sqlalchemy
-pandas
-matplotlib
