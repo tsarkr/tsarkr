@@ -10,7 +10,51 @@ Main repositories
 - [kci_scrape](https://github.com/tsarkr/kci_scrape) — KCI paper scraping and co-authorship network visualization
 - [K-D-H](https://github.com/tsarkr/K-D-H) — K-pop related analysis and data projects
 - [docent](https://github.com/tsarkr/docent) — Research tools and utilities
-- [darkstar](https://github.com/tsarkr/darkstar) — Example Rust project
+ - [darkstar](https://github.com/tsarkr/darkstar) — Rust-based ontology management tool (Protégé alternative)
+
+Project details
+
+- shortener_11e (PHP)
+	- Purpose: Provide a lightweight URL shortening service for internal use and public demo at 11e.kr.
+	- Tech: PHP, MySQL (or SQLite), simple routing and redirect logic.
+	- Status: Production/demo available; accepts improvements for analytics and security.
+	- Quick start: See repository `README.md` for installation and configuration.
+
+- k-heritage (Python)
+	- Purpose: Collect and analyze YouTube comments from the K-Heritage channel to study audience feedback and themes.
+	- Tech: Python, pandas, scikit-learn / transformers (optional), NLTK / KoNLPy for Korean text processing, Jupyter notebooks for exploration.
+	- Status: Research code and notebooks; includes data collection and basic topic/sentiment analysis pipelines.
+	- Quick start: Clone the repo, create a Python virtualenv, install requirements, and run the notebooks in `notebooks/`.
+
+- redditgo (Python)
+	- Purpose: Crawl Reddit communities in Korean, Chinese, and Japanese to analyze sentiment shifts over time (COVID-19 case study).
+	- Tech: Python, PRAW or Pushshift API clients, lang-specific tokenizers, sentiment lexicons or transformer models for classification.
+	- Status: Data collection scripts and analysis notebooks present; extensible for new subreddits and languages.
+	- Quick start: Configure API credentials, run `scripts/collect.py` to gather posts and comments, then run analysis notebooks.
+
+- kci_scrape (Python)
+	- Purpose: Scrape KCI (Korean Citation Index) metadata and papers to map research trends and co-authorship networks in cultural heritage curation.
+	- Tech: Python, requests/BeautifulSoup (or Scrapy), NetworkX / Gephi exports for network visualization, pandas for processing.
+	- Status: Scrapers and visualization scripts available; may require updates for site changes and rate-limiting handling.
+	- Quick start: Inspect `scrapers/` for available scripts; run with caution and respect robots.txt and site terms.
+
+- K-D-H (Python)
+	- Purpose: K-pop related data analysis (lyrics, fandom activity, network metrics) and experimental models.
+	- Tech: Python, NLP toolchains, data visualization libraries.
+	- Status: Experimental analyses and dataset prep scripts.
+	- Quick start: See `README.md` in the repository for dataset sources and preprocessing steps.
+
+- docent (Python / tools)
+	- Purpose: Utility tools and helper libraries used across research projects (data loaders, annotation helpers, small services).
+	- Tech: Python packages, CLI scripts.
+	- Status: Active development; used as internal dependency for other repos.
+	- Quick start: Install as a Python package in editable mode (if used locally) and read module docs.
+
+ - darkstar (Rust)
+	- Purpose: A Rust-based alternative to Protégé for ontology creation, editing, validation, and lightweight reasoning. Targets scripted and web workflows for ontology management and automated pipelines.
+	- Tech: Rust, Cargo, RDF/OWL libraries (e.g. Oxigraph/Sophia), SPARQL support; optional WASM/web frontend for UI.
+	- Status: Prototype; early-stage but usable for scripted ontology workflows and integrations.
+	- Quick start: Clone the repo and run `cargo build` / `cargo run`; see the repository `README.md` for example workflows and usage.
 
 Project summary
 
