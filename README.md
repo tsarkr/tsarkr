@@ -9,7 +9,7 @@ Main repositories
 - [redditgo](https://github.com/tsarkr/redditgo) — Multilingual (Korean/Chinese/Japanese) Reddit collection and sentiment analysis
 - [kci_scrape](https://github.com/tsarkr/kci_scrape) — KCI paper scraping and co-authorship network visualization
 - [K-D-H](https://github.com/tsarkr/K-D-H) — K-pop related analysis and data projects
-- [docent](https://github.com/tsarkr/docent) — Research tools and utilities
+- [D-CENT](https://github.com/tsarkr/docent) — Research tools and utilities
  - [darkstar](https://github.com/tsarkr/darkstar) — Rust-based ontology management tool (Protégé alternative)
 
 Project details
