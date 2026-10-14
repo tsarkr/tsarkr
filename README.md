@@ -44,11 +44,11 @@ Project details
 	- Status: Experimental analyses and dataset prep scripts.
 	- Quick start: See `README.md` in the repository for dataset sources and preprocessing steps.
 
-- docent (Python / tools)
-	- Purpose: Utility tools and helper libraries used across research projects (data loaders, annotation helpers, small services).
-	- Tech: Python packages, CLI scripts.
-	- Status: Active development; used as internal dependency for other repos.
-	- Quick start: Install as a Python package in editable mode (if used locally) and read module docs.
+- D-CENT (Python / core engine)
+	- Purpose: Foundational utility tools and libraries supporting the D-CENT research framework (data loaders, structural parsers, semantic services).
+ 	- Tech: Python packages, CLI scripts.
+  	- Status: Active development; serves as the core dependency for the D-CENT research pipeline.
+  	- Quick start: Install as a Python package in editable mode (if used locally) and read module docs.
 
  - darkstar (Rust)
 	- Purpose: A Rust-based alternative to Protégé for ontology creation, editing, validation, and lightweight reasoning. Targets scripted and web workflows for ontology management and automated pipelines.
