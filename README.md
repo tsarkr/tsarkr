@@ -4,39 +4,24 @@ A collection of personal and research projects focused on Korean cultural herita
 
 Main repositories
 
-- [shortener_11e](https://github.com/tsarkr/shortener_11e) — PHP-based URL shortener (11e.kr)
-- [k-heritage](https://github.com/tsarkr/k-heritage) — YouTube comment text mining and analysis for K-Heritage
-- [redditgo](https://github.com/tsarkr/redditgo) — Multilingual (Korean/Chinese/Japanese) Reddit collection and sentiment analysis
-- [kci_scrape](https://github.com/tsarkr/kci_scrape) — KCI paper scraping and co-authorship network visualization
-- [K-D-H](https://github.com/tsarkr/K-D-H) — K-pop related analysis and data projects
 - [D-CENT](https://github.com/tsarkr/docent) — Digital Contextualized Entity & Narrative Technology
-- [darkstar](https://github.com/tsarkr/darkstar) — Rust-based ontology management tool (Protégé alternative)
+- [DarkStar](https://github.com/tsarkr/darkstar) — Rust-based ontology management tool (Protégé alternative)
+- [K-D-H](https://github.com/tsarkr/K-D-H) — K-pop related analysis and data projects
+- [Hexedit](https://github.com/tsarkr/Hexedit) — Web-based hexadecimal editor built with React, TypeScript, and Vite
 
 Project details
 
-- shortener_11e (PHP)
-	- Purpose: Provide a lightweight URL shortening service for internal use and public demo at 11e.kr.
-	- Tech: PHP, MySQL (or SQLite), simple routing and redirect logic.
-	- Status: Production/demo available; accepts improvements for analytics and security.
-	- Quick start: See repository `README.md` for installation and configuration.
+- D-CENT (Python / core engine)
+	- Purpose: Foundational utility tools and libraries supporting the D-CENT research framework (data loaders, structural parsers, semantic services).
+	- Tech: Python packages, CLI scripts.
+	- Status: Active development; serves as the core dependency for the D-CENT research pipeline.
+	- Quick start: Install as a Python package in editable mode (if used locally) and read module docs.
 
-- k-heritage (Python)
-	- Purpose: Collect and analyze YouTube comments from the K-Heritage channel to study audience feedback and themes.
-	- Tech: Python, pandas, scikit-learn / transformers (optional), NLTK / KoNLPy for Korean text processing, Jupyter notebooks for exploration.
-	- Status: Research code and notebooks; includes data collection and basic topic/sentiment analysis pipelines.
-	- Quick start: Clone the repo, create a Python virtualenv, install requirements, and run the notebooks in `notebooks/`.
-
-- redditgo (Python)
-	- Purpose: Crawl Reddit communities in Korean, Chinese, and Japanese to analyze sentiment shifts over time (COVID-19 case study).
-	- Tech: Python, PRAW or Pushshift API clients, lang-specific tokenizers, sentiment lexicons or transformer models for classification.
-	- Status: Data collection scripts and analysis notebooks present; extensible for new subreddits and languages.
-	- Quick start: Configure API credentials, run `scripts/collect.py` to gather posts and comments, then run analysis notebooks.
-
-- kci_scrape (Python)
-	- Purpose: Scrape KCI (Korean Citation Index) metadata and papers to map research trends and co-authorship networks in cultural heritage curation.
-	- Tech: Python, requests/BeautifulSoup (or Scrapy), NetworkX / Gephi exports for network visualization, pandas for processing.
-	- Status: Scrapers and visualization scripts available; may require updates for site changes and rate-limiting handling.
-	- Quick start: Inspect `scrapers/` for available scripts; run with caution and respect robots.txt and site terms.
+- DarkStar (Rust)
+	- Purpose: A Rust-based alternative to Protégé for ontology creation, editing, validation, and lightweight reasoning. Targets scripted and web workflows for ontology management and automated pipelines.
+	- Tech: Rust, Cargo, RDF/OWL libraries (e.g. Oxigraph/Sophia), SPARQL support; optional WASM/web frontend for UI.
+	- Status: Prototype; early-stage but usable for scripted ontology workflows and integrations.
+	- Quick start: Clone the repo and run `cargo build` / `cargo run`; see the repository `README.md` for example workflows and usage.
 
 - K-D-H (Python)
 	- Purpose: K-pop related data analysis (lyrics, fandom activity, network metrics) and experimental models.
@@ -44,22 +29,16 @@ Project details
 	- Status: Experimental analyses and dataset prep scripts.
 	- Quick start: See `README.md` in the repository for dataset sources and preprocessing steps.
 
-- D-CENT (Python / core engine)
-	- Purpose: Foundational utility tools and libraries supporting the D-CENT research framework (data loaders, structural parsers, semantic services).
- 	- Tech: Python packages, CLI scripts.
-  	- Status: Active development; serves as the core dependency for the D-CENT research pipeline.
-  	- Quick start: Install as a Python package in editable mode (if used locally) and read module docs.
-
- - darkstar (Rust)
-	- Purpose: A Rust-based alternative to Protégé for ontology creation, editing, validation, and lightweight reasoning. Targets scripted and web workflows for ontology management and automated pipelines.
-	- Tech: Rust, Cargo, RDF/OWL libraries (e.g. Oxigraph/Sophia), SPARQL support; optional WASM/web frontend for UI.
-	- Status: Prototype; early-stage but usable for scripted ontology workflows and integrations.
-	- Quick start: Clone the repo and run `cargo build` / `cargo run`; see the repository `README.md` for example workflows and usage.
+- Hexedit (React / TypeScript / Vite)
+	- Purpose: Provide a fast, interactive web-based hexadecimal editor and binary inspection tool in the browser.
+	- Tech: React, TypeScript, Vite.
+	- Status: Active development.
+	- Quick start: Clone the repo, run `npm install` and `npm run dev` to launch the local development server.
 
 Project summary
 
-- Purpose: Develop reproducible analysis pipelines and tooling for cultural heritage and content analysis, including data collection and processing.
-- Key technologies: Python, PHP, Rust, text mining, network analysis.
+- Purpose: Develop reproducible analysis pipelines, ontology/semantic frameworks, and interactive web tools for cultural heritage and data analysis.
+- Key technologies: Python, Rust, React, TypeScript, Vite, ontology management, text mining, network analysis.
 
 Quick start
 
@@ -84,4 +63,4 @@ Repository organization suggestions
 - Topics and descriptions: Improve discoverability by updating each repository's GitHub `description` and `topics` (e.g. `text-mining`, `heritage`, `data-scraping`).
 
 ---
-_Last updated: 2026-05-15_
+_Last updated: 2026-11-01_
